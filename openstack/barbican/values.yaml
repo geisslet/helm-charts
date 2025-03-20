@@ -311,6 +311,8 @@ hsm:
     requests:
       memory: 500Mi
       cpu: 300m
+  multitenancy:
+    enabled: false
 
 utils:
   trust_bundle:
