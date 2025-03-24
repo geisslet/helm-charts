@@ -1,5 +1,6 @@
 global:
   registry: myRegistry
+  registryAlternateRegion: myOtherRegistry
   dbPassword: secret!
   master_password: topSecret!
   octavia_service_password: topSecret!!

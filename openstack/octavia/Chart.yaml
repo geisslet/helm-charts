@@ -8,25 +8,25 @@ sources:
   - https://git.openstack.org/cgit/openstack/octavia
   - https://git.openstack.org/cgit/openstack/openstack-helm
 # The versions are defined in the changelog: https://docs.openstack.org/releasenotes/octavia/yoga.html
-version: 10.0.2
+version: 10.0.3
 dependencies:
   - condition: mariadb.enabled
     name: mariadb
     repository: oci://keppel.eu-de-1.cloud.sap/ccloud-helm
-    version: 0.14.2
+    version: 0.18.2
   - name: memcached
     repository: oci://keppel.eu-de-1.cloud.sap/ccloud-helm
-    version: 0.5.3
+    version: 0.6.9
   - condition: mariadb.enabled
     name: mysql_metrics
     repository: oci://keppel.eu-de-1.cloud.sap/ccloud-helm
-    version: 0.3.5
+    version: 0.4.2
   - name: rabbitmq
     repository: oci://keppel.eu-de-1.cloud.sap/ccloud-helm
-    version: 0.11.1
+    version: 0.17.1
   - name: utils
     repository: oci://keppel.eu-de-1.cloud.sap/ccloud-helm
-    version: 0.19.7
+    version: 0.25.0
   - name: owner-info
     repository: oci://keppel.eu-de-1.cloud.sap/ccloud-helm
     version: 1.0.0
