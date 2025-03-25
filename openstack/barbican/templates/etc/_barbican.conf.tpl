@@ -1,6 +1,8 @@
 [DEFAULT]
 # Show debugging output in logs (sets DEBUG log level output)
-debug = {{.Values.debug}}
+debug = True
+verbose = True
+wsgi_debug = True
 
 log_config_append = /etc/barbican/logging.ini
 {{- include "ini_sections.logging_format" . }}
@@ -85,7 +87,7 @@ global_default = True
 {{- if .Values.hsm.multitenancy.enabled }}
 [secretstore]
 enable_multiple_secret_stores = True
-stores_lookup_suffix = software, thales_hsm, utimaco_hsm
+stores_lookup_suffix = software, thales_hsm
 namespace = barbican.secretstore.plugin
 
 [secretstore:software]
@@ -94,10 +96,6 @@ crypto_plugin = simple_crypto
 
 [secretstore:thales_hsm]
 secret_store_plugin = store_crypto
-crypto_plugin = p11_crypto
-global_default = True
-
-[secretstore:utimaco_hsm]
-secret_store_plugin = store_crypto
 crypto_plugin = hsm_partition_crypto
+global_default = True
 {{- end }}
