@@ -10,11 +10,11 @@
   password: {{ .Values.tempestAdminPassword | quote }}
   project_name: 'tempest1'
   types:
-   - reader
-   - alt
+   - demo
 - username: 'tempestuser2'
   tenant_name: 'tempest2'
   password: {{ .Values.tempestAdminPassword | quote }}
   project_name: 'tempest2'
   types:
-   - demo
+   - reader
+   - alt
