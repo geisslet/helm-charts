@@ -126,3 +126,4 @@ supportGroups:
   - storage
   - capacity-ops
   - workload-management
+  - coredns
