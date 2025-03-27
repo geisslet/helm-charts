@@ -12,19 +12,19 @@
                     {
                         "state_name": "rollover",
                         "conditions": {
-                            "min_index_age": "{{ .Values.global.data_stream.streams.jump.min_index_age }}"
+                            "min_index_age": "{{ .Values.global.data_stream.jump.min_index_age }}"
                         }
                     },
                     {
                         "state_name": "rollover",
                         "conditions": {
-                            "min_size": "{{ .Values.global.data_stream.streams.jump.min_size }}"
+                            "min_size": "{{ .Values.global.data_stream.jump.min_size }}"
                         }
                     },
                     {
                         "state_name": "rollover",
                         "conditions": {
-                            "min_doc_count": "{{ .Values.global.data_stream.streams.jump.min_doc_count }}"
+                            "min_doc_count": "{{ .Values.global.data_stream.jump.min_doc_count }}"
                         }
                     }
                 ]
@@ -74,7 +74,7 @@
                 "index_patterns": [
                     "jump-datastream"
                 ],
-                "priority": 1
+                "priority": 2
             }
     }
 }
